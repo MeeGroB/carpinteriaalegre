@@ -1,0 +1,695 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* custom scroll bar */
+:root{
+    --color-primary:#3c3c3c ;
+}  
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+::selection{
+  background: rgba(255, 136, 0, 0.459);
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+}
+
+
+.content{
+    margin: auto;
+    padding: 0 30px;
+}
+
+.container{
+    width: 90%;
+    padding: 80px 0;
+    margin: 0 auto;
+    overflow: hidden;
+    max-width: 1200px;
+}
+  
+/*menu*/
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    padding: 25px 0;
+    transition: all 0.3s ease;
+}
+.navbar.sticky{
+    background: #1b1b1b;
+    padding: 10px 0;
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.1);
+}
+.navbar .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .menu-list{
+    display: inline-flex;
+}
+.menu-list li{
+    list-style: none;
+}
+.menu-list li a{
+    color: rgb(104, 103, 103);
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.menu-list li a:hover{
+    color: rgb(255, 145, 2);
+}
+  
+.icon{
+    color: rgb(104, 103, 103);
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+.menu-list .cancel-btn{
+    position: absolute;
+    right: 30px;
+    top: 20px;
+}
+  
+.log{
+    width: 30%;
+}
+  
+
+/*contenido*/  
+.textos-hero{
+    height:25vh;
+}
+
+.hero{
+    height: 70px;
+    padding: 0;
+}
+
+.subtitle{
+    text-decoration: none;
+    color: #414d5a;
+    font-size: 2rem;
+    text-shadow: hsla(0, 0%, 46%, 0.089) 0.1em 0.1em 0.2em;
+}
+.subtitle2{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}  
+
+.portada{
+    background-image: url(../img/carpinteria_en_melamina/muebles_de_baño/baño_1.jpg);
+    height: 450px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 20%;
+    box-shadow: 0px 15px 0px 1px #414d5a inset;
+}
+
+.about1{
+    text-align: center;
+    margin: 0 auto;
+    padding: 60px 100px;
+}
+
+.about1 h2{
+    font-size: 20px;
+    padding-bottom: 25px;
+    color: var(--color-primary);
+}
+
+/*gallery*/
+.galeria{
+    background: -moz-linear-gradient(left, #1d2630 40%, rgba(0, 0, 0, 0.849) 100%); /* FF3.6+ */
+}
+.wrapper{
+    max-width: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+}
+.gallery .image{
+    padding: 3px;
+    width: calc(18% / 2);
+}
+.gallery .image span{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0px 8px 8px -6px rgba(5, 5, 5, 0.425);
+}
+.gallery .image img{
+    width: 100%;
+    vertical-align: middle;
+    transition: all 0.3s ease;
+}
+.gallery .image:hover img{
+    transform: scale(1.1);
+}
+  
+.preview-box{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    background: rgb(19, 19, 19);
+    max-width: 700px;
+    width: 100%;
+    z-index: 5;
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 3px;
+    padding: 0 5px 5px 5px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+}
+.preview-box.show{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+    transition: all 0.3s ease;
+}
+.preview-box .details{
+    display: flex;
+    align-items: center;
+    padding: 12px 15px 12px 10px;
+    justify-content: space-between;
+}
+.preview-box .details .title{
+    display: flex;
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+.details .title p{
+    margin: 0 5px;
+}
+.details .title p.current-img{
+    font-weight: 500;
+}
+.details .icon{
+    color: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+}
+.preview-box .image-box{
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+.image-box .slide{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+    height: 50px;
+    width: 60px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 3px;
+}
+.slide.prev{
+    left: 0px;
+}
+.slide.next{
+    right: 0px;
+}
+.image-box img{
+    width: 100%;
+    border-radius: 0 0 3px 3px;
+}
+.shadow{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    display: none;
+    background: rgba(0,0,0,0.45);
+}
+
+/*mueble cocina*/
+.image-ilustra{
+    height: 450px;
+    background-image: url(../img/img_baño.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-position: 20%;
+}
+.texto-ilustra{
+    float: right;
+    color: #fff;
+    width: 50%;
+    padding: 120px 0;
+    margin-right: 50px;
+}
+
+
+/*modelos de baño*/
+.cajonera-baja{
+    padding: 60px;
+    text-align: center;
+}
+.cajonera-baja h3{
+    font-size: 1.7rem;
+    padding-bottom: 10px;
+}
+
+.mueble-baño{
+    background: #202020;
+    text-align: center;
+    /*height: 600px;*/
+}
+
+
+.container-grid{
+    display: grid;
+    height: 90%;
+    grid-template-columns: repeat(13.1fr);
+    grid-template-rows: repeat(14.1fr);
+    grid-template-areas: 
+    "img1 img2 img3 img4 img5"
+    "img1 img2 img6 img7 img8"
+    "img9 img10 img10 img7 img11"
+    "img9 img10 img10 img12 img12"
+    "img9 img13 img13 img12 img12";
+    gap: 3px;
+}
+
+.img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.img:hover{
+    filter: grayscale(50%);
+    cursor: pointer;
+    transition: filter .5s;
+}
+
+.img-1{
+    grid-area: img1;
+}
+.img-2{
+    grid-area: img2;
+}
+.img-3{
+    grid-area: img3;
+}
+.img-4{
+    grid-area: img4;
+}
+.img-5{
+    grid-area: img5;
+}
+.img-6{
+    grid-area: img6;
+}
+.img-7{
+    grid-area: img7;
+}
+.img-8{
+    grid-area: img8;
+}
+.img-9{
+    grid-area: img9;
+}
+.img-10{
+    grid-area: img10;
+}
+.img-11{
+    grid-area: img11;
+}
+.img-12{
+    grid-area: img12;
+}
+.img-13{
+    grid-area: img13;
+}
+.img-14{
+    grid-area: img14;
+}
+
+.container-img{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left: 0;
+    transform: translateX(-100%);
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform .4s ease-in;
+}
+.move{
+    transform: translateX(0);
+}
+.img-show{
+    height: 80%;
+    transform: scale(0);
+    display: block;
+    object-fit: cover;
+    transition: transfrom .2s .4s;
+}
+.show{
+    transform: scale(1);
+}
+.copy{
+    position: fixed;
+    color: rgb(255, 255, 255);
+    bottom: 20px;
+}
+
+
+  
+/*footer*/
+.footer{
+    background: #000;
+  
+}
+  
+.footer__grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
+  
+.footer__title{
+    font-weight: 400;
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+  
+.footer__icons{
+    display: flex;
+    justify-content: space-evenly;
+}
+  
+.footer__container-icons{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+  
+.footer__icon{
+    color: inherit;
+    font-size: 30px;
+    text-decoration: none;
+}
+  
+.fab.footer__icon{
+    line-height: 60px;
+}
+  
+  
+.final{
+    background: #000;
+    font-size: 0.9rem;
+    color: #fff;
+}
+  
+    
+    
+
+
+@media screen and (max-width: 800px){
+
+    :root{
+        --boton-padding: 18px 40px;
+    }
+
+    body.disabled{
+        overflow: hidden;
+    }
+    .icon{
+        display: block;
+    }
+    .icon.hide{
+        display: none;
+    }
+    .navbar .menu-list{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        max-width: 400px;
+        left: -100%;
+        top: 0px;
+        display: block;
+        padding: 40px 0;
+        text-align: center;
+        background: #222;
+        transition: all 0.3s ease;
+    }
+    .navbar.show .menu-list{
+        left: 0%;
+    }
+    .navbar .menu-list li{
+        margin-top: 45px;
+    }
+    .navbar .menu-list li a{
+        font-size: 23px;
+        margin-left: -100%;
+        transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    .navbar.show .menu-list li a{
+        margin-left: 0px;
+    }
+    .about1{
+        padding: 50px 50px;
+    } 
+    .texto-ilustra{
+        width: 400px;
+    }
+    .contenido-textos p{
+        padding: 40px;
+    }    
+
+
+    /*foot*/
+
+    .footer__grid{
+        grid-template-columns: 1fr;
+    }
+
+    .footer__contac{
+        grid-row: 1/2;
+    }
+
+}
+
+
+@media screen and (max-width: 500px) {
+    :root{
+        --boton-padding: 18px 35px;
+    }
+
+
+    .logo{
+        align-items: center;
+        max-width: 100%;
+    }
+
+    .nav{
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin-top: 10px;
+
+    }
+
+    .nav__items{
+        padding: 0 10px;
+        border: 0;
+    }
+
+    .portada{
+        height: 300px;
+        /*background-size:auto;*/
+    }
+
+
+    .textos-hero{
+        height: 20vh;
+    }
+
+    .subtitle{
+        font-size: 1.4rem;
+        margin: 0;
+    }
+
+    .about1{
+        padding: 30px 40px;
+    } 
+    .about1 h2{
+        font-size: 15px;
+        padding-bottom: 15px;
+    }  
+    .about1 p{
+        font-size: 13px;
+    }  
+
+    .gallery .image{
+        padding: 3px;
+        width: calc(25% / 2);
+    } 
+    
+    .texto-ilustra{
+        background: hsla(216, 16%, 13%, 0.863);
+        width: 220px;
+        padding: 20px 10px;
+        margin: 25px;
+        font-size: 0.8rem;
+        text-align: center;
+    }  
+    
+    /*cajonera*/
+    .cajonera-baja{
+        padding: 40px;
+    }
+    .cajonera-baja h3{
+       font-size: 1.5rem;
+       padding-bottom: 10px;
+    }
+    .contenedor-cajonera{
+        height: 700px;
+        display: block;
+    }
+    .img-show{
+        height: 70%;
+    }
+
+    .final{
+        text-align: center;
+        font-size: 0.8rem;
+    }
+    
+}
+
+@media screen and (max-width: 300px) {
+
+    .navbar .logo a{
+        font-size: 27px;
+    }
+
+    .content{
+        padding: 0 20px;
+    }
+
+    .textos-hero{
+        height: 15vh;
+    }
+
+    .hero{
+        height: 40px;
+    }
+    
+    .subtitle{
+        font-size: 1rem;
+        padding-left: 10px;
+    }
+    .subtitle2{
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }    
+    .portada{
+        background-image: url(../img/carpinteria_en_melamina/muebles_de_baño/baño_1_small.jpg);        
+        background-position-y: top;
+        background-size: 400px 500px;
+        height: 250px;
+        box-shadow: 0px 10px 0px 1px #626262 inset;
+    }
+
+    .about1{
+        padding: 30px 20px;
+    } 
+    .about1 h2{
+        font-size: 13px;
+    }  
+    .about1 p{
+        font-size: 12px;
+    } 
+    .gallery .image{
+        width: calc(25% / 1);
+    } 
+    .image-box .slide{
+        width: 40px;
+    }    
+    .image-ilustra{
+        height: 400px;
+        background-position: 5%;
+    }
+    
+    .texto-ilustra{
+        background: hsla(212, 25%, 15%, 0.822);
+        font-size: 0.8rem;
+        text-align: center;
+        margin: 40px;
+    }
+
+    /*cajonera*/
+    .cajonera-baja{
+        padding: 30px;
+    }
+    .cajonera-baja h3{
+        font-size: 1.1rem;
+    }
+    .cajonera-baja p{
+        font-size: 0.8rem;
+    }
+    .img-show{
+        height: 40%;
+    }
+
+    .footer__title{
+        font-size: 1.1rem;
+    }
+
+    .footer__container-icons{
+        width: 50px;
+        height: 50px;
+    }   
+    
+    .fab.footer__icon{
+        line-height: 50px;
+    }    
+        
+    
+}
+
+
+
+
+
+
+
