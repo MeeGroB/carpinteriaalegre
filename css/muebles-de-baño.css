@@ -135,7 +135,8 @@ body{
 
 /*gallery*/
 .galeria{
-    background: -moz-linear-gradient(left, #1d2630 40%, rgba(0, 0, 0, 0.849) 100%); /* FF3.6+ */
+    background: rgb(29,38,48);
+background: linear-gradient(90deg, rgba(29,38,48,1) 0%, rgba(41,40,40,1) 100%);
 }
 .wrapper{
     max-width: 900px;
@@ -444,7 +445,7 @@ body{
     
 
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 768px){
 
     :root{
         --boton-padding: 18px 40px;
@@ -510,7 +511,7 @@ body{
 }
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 480px) {
     :root{
         --boton-padding: 18px 35px;
     }
@@ -540,7 +541,7 @@ body{
 
 
     .textos-hero{
-        height: 20vh;
+        height: 18vh;
     }
 
     .subtitle{
@@ -568,7 +569,6 @@ body{
         background: hsla(216, 16%, 13%, 0.863);
         width: 220px;
         padding: 20px 10px;
-        margin: 25px;
         font-size: 0.8rem;
         text-align: center;
     }  
@@ -596,7 +596,7 @@ body{
     
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 320px) {
 
     .navbar .logo a{
         font-size: 27px;
@@ -652,9 +652,7 @@ body{
     
     .texto-ilustra{
         background: hsla(212, 25%, 15%, 0.822);
-        font-size: 0.8rem;
         text-align: center;
-        margin: 40px;
     }
 
     /*cajonera*/

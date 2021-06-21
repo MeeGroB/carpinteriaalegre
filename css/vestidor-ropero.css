@@ -492,7 +492,7 @@ body{
     
 
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 768px){
 
     :root{
         --boton-padding: 18px 40px;
@@ -559,7 +559,7 @@ body{
 }
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 480px) {
     :root{
         --boton-padding: 18px 35px;
     }
@@ -589,7 +589,7 @@ body{
 
 
     .textos-hero{
-        height: 20vh;
+        height: 18vh;
     }
 
     .subtitle{
@@ -633,9 +633,19 @@ body{
     .about-2{
         grid-template-columns: 1fr;
     }
+    .about__texts{
+        height: auto;
+    }
+    .about__texts2{
+        height: auto;
+    }
 
     .about__texts:last-child{
        grid-row: 3/4;
+    }
+
+    .about__paragraph{
+        font-size: 0.8rem;
     }
 
     .final{
@@ -645,7 +655,7 @@ body{
     
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 320px) {
 
     .navbar .logo a{
         font-size: 27px;
@@ -738,24 +748,9 @@ body{
         font-size: 1rem;
         padding: 30px;
     }
-    .about .container{
-        padding: 50px 0;
-    }
-    .about-2 .container{
-        padding: 50px 0;
-    }
     .about__img--left{
         padding-top: 30px;
      }
-    .about__texts{
-        height: 370px;
-    }
-    .about__texts2{
-        height: 370px;
-    }  
-    .about__paragraph{
-        font-size: 0.8rem;
-    } 
 
     .footer__title{
         font-size: 1.1rem;

@@ -169,7 +169,6 @@ h2{
 }
 
 section {
-    height: 110vh;
     display: flex;
     overflow: hidden;
 }
@@ -179,7 +178,9 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: -moz-linear-gradient(bottom,  rgb(27, 24, 24) 60%, rgb(39, 35, 35) 0%); /* FF3.6+ */
+    padding-bottom: 50px;
+    background: rgb(27,24,24);
+background: linear-gradient(0deg, rgba(27,24,24,1) 0%, rgba(27,24,24,1) 60%, rgba(39,35,35,1) 60%, rgba(39,35,35,1) 100%);
 }
 
 .room-gallery2 {
@@ -187,7 +188,8 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: -moz-linear-gradient(bottom,  #241f13 60%, #2e2819 0%); /* FF3.6+ */
+    background: rgb(36,31,19);
+background: linear-gradient(0deg, rgba(36,31,19,1) 0%, rgba(36,31,19,1) 60%, rgba(46,40,25,1) 60%, rgba(46,40,25,1) 100%);
 }
 
 .room-gallery3 {
@@ -195,7 +197,8 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: -moz-linear-gradient(bottom, #241d1a 60%, #302724 0%); /* FF3.6+ */
+    background: rgb(36,29,26);
+background: linear-gradient(0deg, rgba(36,29,26,1) 0%, rgba(36,29,26,1) 60%, rgba(48,39,36,1) 60%, rgba(48,39,36,1) 100%);
 }
   
 .gallery-hightlight {
@@ -338,7 +341,7 @@ img.room-active3 {
     
 
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 768px){
 
     :root{
         --boton-padding: 18px 40px;
@@ -410,7 +413,7 @@ img.room-active3 {
 }
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 480px) {
     :root{
         --boton-padding: 18px 35px;
     }
@@ -440,8 +443,12 @@ img.room-active3 {
 
 
     .textos-hero{
-        height: 20vh;
+        height: 18vh;
     }
+    .hero{
+        height: 60px;
+    }
+    
 
     .subtitle{
         font-size: 1.4rem;
@@ -463,7 +470,6 @@ img.room-active3 {
     }   
 
     section {
-        height: 80vh;
         background-position: 80%;
     }    
 
@@ -503,7 +509,7 @@ img.room-active3 {
     
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 320px) {
 
     .navbar .logo a{
         font-size: 27px;
@@ -554,10 +560,6 @@ img.room-active3 {
         font-size: 0.7rem;
         height: 40px;
         padding: 15px 0;
-    }
-
-    section{
-        height: 330px;
     }
 
     .titulo{

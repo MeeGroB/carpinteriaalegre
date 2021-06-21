@@ -135,7 +135,8 @@ body{
 
 /*gallery*/
 .galeria{
-    background: -moz-linear-gradient(left, #52150f 40%, rgba(12, 0, 0, 0.938) 100%); /* FF3.6+ */
+    background: rgb(82,21,15);
+background: linear-gradient(90deg, rgba(82,21,15,1) 0%, rgba(12,0,0,1) 100%);
 }
 .wrapper{
     max-width: 900px;
@@ -383,7 +384,7 @@ body{
 }
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 480px) {
     :root{
         --boton-padding: 18px 35px;
     }
@@ -413,7 +414,7 @@ body{
 
 
     .textos-hero{
-        height: 20vh;
+        height: 18vh;
     }
 
     .subtitle{
@@ -451,7 +452,7 @@ body{
     
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 320px) {
 
     .navbar .logo a{
         font-size: 27px;
@@ -509,8 +510,7 @@ body{
         background: hsla(6, 62%, 30%, 0.877);
         width: 250px;
         padding: 20px 10px;
-        margin-left: 25px;
-        font-size: 0.8rem;
+        margin: auto;
         text-align: center;
     }
 

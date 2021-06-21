@@ -135,7 +135,8 @@ body{
 
 /*gallery*/
 .galeria{
-    background: -moz-linear-gradient(left, #313131 40%, rgba(0, 0, 0, 0.233) 100%); /* FF3.6+ */
+    background: rgb(42,42,42);
+background: linear-gradient(90deg, rgba(42,42,42,1) 0%, rgba(204,204,204,1) 100%);
 }
 .wrapper{
     max-width: 900px;
@@ -427,7 +428,7 @@ background: linear-gradient(0deg, rgba(181,88,3,1) 7%, rgba(129,69,25,1) 7%, rgb
     
 
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 768px){
 
     :root{
         --boton-padding: 18px 40px;
@@ -493,7 +494,7 @@ background: linear-gradient(0deg, rgba(181,88,3,1) 7%, rgba(129,69,25,1) 7%, rgb
 }
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 480px) {
     :root{
         --boton-padding: 18px 35px;
     }
@@ -523,7 +524,7 @@ background: linear-gradient(0deg, rgba(181,88,3,1) 7%, rgba(129,69,25,1) 7%, rgb
 
 
     .textos-hero{
-        height: 20vh;
+        height: 18vh;
     }
 
     .subtitle{
@@ -548,7 +549,6 @@ background: linear-gradient(0deg, rgba(181,88,3,1) 7%, rgba(129,69,25,1) 7%, rgb
     } 
     
     .texto-ilustra{
-        margin-right: 15px;
         font-size: 1.1rem;
     }  
     
@@ -580,6 +580,9 @@ background: linear-gradient(0deg, rgba(181,88,3,1) 7%, rgba(129,69,25,1) 7%, rgb
         height: 700px;
         display: block;
     }
+    .mueble-cocina p{
+        font-size: 13px;
+    }
     
     .imagen-about-us{
         width: 100%;
@@ -597,7 +600,7 @@ background: linear-gradient(0deg, rgba(181,88,3,1) 7%, rgba(129,69,25,1) 7%, rgb
     
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 320px) {
 
     .navbar .logo a{
         font-size: 27px;
@@ -654,9 +657,9 @@ background: linear-gradient(0deg, rgba(181,88,3,1) 7%, rgba(129,69,25,1) 7%, rgb
     .texto-ilustra{
         background: hsla(0, 0%, 13%, 0.863);
         width: 250px;
-        padding: 20px 10px;
-        margin: 25px;
-        font-size: 0.8rem;
+        padding: 10px;
+        margin-top: 30px;
+        font-size: 12px;
         text-align: center;
     }
     .mueble-cocina h3{
