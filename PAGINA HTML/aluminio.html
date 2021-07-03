@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carpintería Alegre</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/aluminio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="content">
+          <div class="logo">
+            <img src="img/logo horizontal.png" class="log" alt="">
+          </div>
+          <ul class="menu-list">
+            <div class="icon cancel-btn">
+              <i class="fas fa-times"></i>
+            </div>
+            <li><a href="index.html">Inicio</a></li> 
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="melamina.html">Servicios</a></li>
+            <li><a href="#">Contáctanos</a></li>
+          </ul>
+          <div class="icon menu-btn">
+            <i class="fas fa-bars"></i>
+          </div>
+        
+        </div>
+      </nav>
+
+      <div class="textos-hero"></div>
+      <div class="hero-cont container">
+        <h2 class="texto">Servicios</h2>
+      </div>
+
+      <div class="hero">
+          <a href="melamina.html" class="subtitle"><h2>Carpintería en Melamina</h2></a>
+          <div class="subtitle2"><h2>Carpintería en Aluminio</h2></div>
+      </div>
+
+    <main>
+        <section class="img1">
+            <div class="center">
+                <h3>Fachadas de Vidrio</h3>
+                <a href="fachadas de vidrio.html">entrar</a>
+            </div>
+        </section>
+
+         <section class="img2">
+            <div class="center">
+                <h3>Puertas Móviles</h3>
+                <a href="puertas moviles.html">entrar</a>
+            </div>
+         </section>
+
+         <section class="img3">
+            <div class="center">
+                <h3>Puertas y Ventanas</h3>
+                <a href="ventanas y puertas.html">entrar</a>
+            </div>
+         </section>
+    </main>
+
+
+
+    <footer class="footer">
+        <div class="container footer__grid">
+            <div class="final">
+                <p>Av. Simón Lopez zona cruce Taquiña S/N, entre Av. Segunda y calle H.Baya Cochabamba<br>  carpinteriaalegrebolivia@gmail.com<br> Llamar +591 79781683</p>
+            </div>
+
+
+            <div class="footer__contact">
+                <h3 class="footer__title">Contáctame</h3>
+                <div class="footer__icons">
+                    <span class="footer__container-icons">
+                        <a class="fab fa-facebook-f footer__icon" href="#"></a>
+                    </span>
+
+                    <span class="footer__container-icons">
+                        <a class="fab fa-whatsapp footer__icon" href="#"></a>
+                    </span>
+
+                </div>
+              </div>
+        </div>
+    </footer>
+
+
+    <script src="http://kit.fontawesome.com/f955c68031.js"
+    crossorigin="anonymous"></script>
+
+
+    <script>
+        const body = document.querySelector("body");
+        const navbar = document.querySelector(".navbar");
+        const menuBtn = document.querySelector(".menu-btn");
+        const cancelBtn = document.querySelector(".cancel-btn");
+        menuBtn.onclick = ()=>{
+          navbar.classList.add("show");
+          menuBtn.classList.add("hide");
+          body.classList.add("disabled");
+        }
+        cancelBtn.onclick = ()=>{
+          body.classList.remove("disabled");
+          navbar.classList.remove("show");
+          menuBtn.classList.remove("hide");
+        }
+        window.onscroll = ()=>{
+          this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+        }
+      </script>
+
+
+       
+</body>
+</html>
